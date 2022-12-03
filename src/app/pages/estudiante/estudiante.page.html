@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-text-center" color="primary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <div class="tittle">
+    <h4>Sesion Estudiante</h4>
+    <h1>Bienvenido {{usuario?.nomUsuario}}</h1>
+  </div>
+
+  
+  <div class="ion-margin-top ion-text-center">
+    <ion-button expand="block" (click)="scanner()" color="warning">Activar Camara</ion-button>
+    <ion-button  expand="block"  color="secondary" (click)="logout()">Cerrar Sesión</ion-button>
+  </div>
+
+
+</ion-content>

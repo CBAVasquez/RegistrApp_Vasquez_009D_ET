@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button routerLink="/login" color="warning">Volver
+    </ion-button>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content color="light">
+
+  <div class="tittle">
+    <h4>Restablecer Contraseña</h4>
+  </div>
+
+<ion-input placeholder="Contraseña nueva" type="password" class="primary-input"></ion-input>
+<ion-input placeholder="Repetir Contraseña" type="Password" class="primary-input"></ion-input>
+
+<div class="ion-margin-top ion-text-center">
+  <ion-button expand="block" (click)="cambio()" routerLink="/inicio" color="secondary">Restablecer Contraseña</ion-button>
+</div>
+
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button [routerLink]="['/docente']" color="warning">Volver
+    </ion-button>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>api</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-col *ngFor="let feriado of api;let i = index">
+
+
+<ion-card>
+  <h1>{{feriado.nombre}}</h1>
+  <h2>{{feriado.fecha}}</h2>
+  <h3>{{feriado.irrenunciable}}</h3>
+  <h4>{{feriado.tipo}}</h4>
+
+</ion-card>
+</ion-col>
+</ion-content>

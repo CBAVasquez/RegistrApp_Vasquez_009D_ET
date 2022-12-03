@@ -1,0 +1,54 @@
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-button [routerLink]="['/inicio']" color="warning">Volver
+    </ion-button>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content class="ion-padding" color="light">
+<div class="tittle">
+    <h4>Iniciar Sesion</h4>
+    <a>Docente / Estudiante</a>
+
+
+</div>
+
+<ion-card-content>
+  <form [formGroup] = "formularioLogin">
+
+  <ion-item>
+    <ion-label color="secondary" position="floating">Correo:</ion-label>
+    <ion-input formControlName="correo" pattern="^([a-zA-Z0-9-.]+)@([a-zA-Z0-9-.]+).([a-zA-Z]{2,5})$"required type="email"></ion-input>
+  </ion-item>
+  <span *ngIf="f['correo'].getError('required')!=null">Ingrese Correo</span>
+
+
+
+  <ion-item>
+    <ion-label color="secondary" position="floating">Contraseña:</ion-label>
+    <ion-input formControlName="password" type="password"></ion-input>
+  </ion-item>
+  
+  <span *ngIf="f['password'].getError('required')!=null">Ingrese contraseña</span>
+
+  <span *ngIf="f['password'].getError('minlength')!=null">Minimo 1 caracter.</span>
+
+
+
+
+
+</form>
+
+<div class="ion-margin-top ion-text-center">
+  <ion-button (click)="Ingresar()" expand="block" routerLink="/docente" color="secondary">Iniciar Sesion</ion-button>
+</div>
+
+<div class="ion-margin-top ion-text-center">
+  <ion-button expand="block" routerLink="/rescontra" color="secondary">Restablecer Contraseña</ion-button>
+</div>
+</ion-card-content>
+
+
+</ion-content>
+

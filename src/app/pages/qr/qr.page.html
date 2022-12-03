@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-button color="warning" routerLink="/docente">Volver
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>
+      QR
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+
+
+  <ion-card class="ion-text-center">
+
+    
+    
+    <ion-card-content>
+
+      <ion-list> 
+        <ion-item>
+          <ion-select placeholder="Modulo" >
+            <ion-select-option value="modulo 1">Modulo 1</ion-select-option>
+            <ion-select-option value="modulo 2">Modulo 2</ion-select-option>
+            <ion-select-option value="modulo 3">Modulo 3</ion-select-option>
+            <ion-select-option value="modulo 4">Modulo 4</ion-select-option>
+            <ion-select-option value="modulo 5">Modulo 5</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+      <qrcode
+        [qrdata]="qrCodeString"
+        [width]="220"
+        [errorCorrectionLevel]="'M'"></qrcode>
+
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-button
+    color="secondary"
+    expand="block"
+    class="ion-margin"
+    (click)="starScan()">
+        Scan QR code
+  </ion-button>
+
+  <ion-item>
+    <ion-label class="ion-text-wrap">Scan Result: {{scannedResult}}</ion-label>
+  </ion-item>
+</ion-content>
