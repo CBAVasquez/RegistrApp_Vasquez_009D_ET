@@ -10,7 +10,7 @@
 <ion-header>
   <ion-toolbar color="secondary">
     <ion-title>
-      QR
+      Codigo QR
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -28,15 +28,24 @@
 
       <ion-list> 
         <ion-item>
-          <ion-select placeholder="Modulo" >
-            <ion-select-option value="modulo 1">Modulo 1</ion-select-option>
-            <ion-select-option value="modulo 2">Modulo 2</ion-select-option>
-            <ion-select-option value="modulo 3">Modulo 3</ion-select-option>
-            <ion-select-option value="modulo 4">Modulo 4</ion-select-option>
-            <ion-select-option value="modulo 5">Modulo 5</ion-select-option>
+          <ion-select placeholder="Modulo" [(ngModel)]="usuario.modulo" >
+            <ion-select-option value="Estadistica Descriptiva">Estadistica Descriptiva</ion-select-option>
+            <ion-select-option value="Aplicaciones Moviles">Aplicaciones Moviles</ion-select-option>
+            <ion-select-option value="Etica Para el trabajo">Etica Para el trabajo</ion-select-option>
+            <ion-select-option value="Ingles">Ingles</ion-select-option>
+            <ion-select-option value="Arquitectura">Arquitectura</ion-select-option>
           </ion-select>
         </ion-item>
       </ion-list>
+
+      <ion-button
+      color="secondary"
+      expand="block"
+      class="ion-margin"
+      (click)="generarQR()">
+      Generar Codigo QR
+    </ion-button>
+
       <qrcode
         [qrdata]="qrCodeString"
         [width]="220"
@@ -46,15 +55,19 @@
 
   </ion-card>
 
+
+
   <ion-button
-    color="secondary"
-    expand="block"
-    class="ion-margin"
-    (click)="starScan()">
-        Scan QR code
-  </ion-button>
+  color="secondary"
+  expand="block"
+  class="ion-margin"
+  (click)="verQR()">
+      Ver QR
+</ion-button>
+
+
 
   <ion-item>
-    <ion-label class="ion-text-wrap">Scan Result: {{scannedResult}}</ion-label>
+    <ion-label class="ion-text-wrap">Scan Result: {{scannerResult}}</ion-label>
   </ion-item>
 </ion-content>
