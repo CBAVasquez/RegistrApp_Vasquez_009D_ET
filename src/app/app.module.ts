@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { BarcodeScanner } from '@awesome-cordova-plugins/barcode-scanner/ngx';
+import { DatePipe } from '@angular/common';
 
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
@@ -26,7 +27,7 @@ imports: [
       name: 'mydb' ,
       driverOrder: [Drivers.IndexedDB,Drivers.LocalStorage]
     }),],
-  providers: [BarcodeScanner,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [BarcodeScanner,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },DatePipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

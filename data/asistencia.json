@@ -1,0 +1,24 @@
+{
+  "asistencia": [
+    {
+      "id": 1,
+      "nombre": "mati",
+      "modulo": "aplicacion movil"
+    },
+    {
+      "id": 2,
+      "nombre": "nico",
+      "modulo": "calidad de software"
+    },
+    {
+      "nombre": "seba",
+      "modulo": "calidad de software",
+      "id": 3
+    },
+    {
+      "nombre": "vivi",
+      "modulo": "aplicacion  movil",
+      "id": 4
+    }
+  ]
+}

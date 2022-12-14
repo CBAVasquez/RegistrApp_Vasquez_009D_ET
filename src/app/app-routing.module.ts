@@ -62,6 +62,14 @@ const routes: Routes = [
     path: 'api',
     loadChildren: () => import('./pages/api/api.module').then( m => m.ApiPageModule)
   },
+  {
+    path: 'listar-asistencia',
+    loadChildren: () => import('./pages/listar-asistencia/listar-asistencia.module').then( m => m.ListarAsistenciaPageModule)
+  },
+  {
+    path: 'agregar-asistencia',
+    loadChildren: () => import('./pages/agregar-asistencia/agregar-asistencia.module').then( m => m.AgregarAsistenciaPageModule)
+  },
   
 
 ];

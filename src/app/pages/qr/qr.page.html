@@ -36,6 +36,9 @@
             <ion-select-option value="Arquitectura">Arquitectura</ion-select-option>
           </ion-select>
         </ion-item>
+        <ion-label>{{cortado}}</ion-label>
+
+
       </ion-list>
 
       <ion-button
@@ -48,7 +51,7 @@
 
       <qrcode
         [qrdata]="qrCodeString"
-        [width]="220"
+        [width]="200"
         [errorCorrectionLevel]="'M'"></qrcode>
 
     </ion-card-content>
@@ -68,6 +71,8 @@
 
 
   <ion-item>
-    <ion-label class="ion-text-wrap">Scan Result: {{scannerResult}}</ion-label>
+    <ion-label class="ion-text-wrap">Ramo: {{scannerResult}}</ion-label>
+    <ion-label class="ion-text-wrap">fecha: {{fechascanned}}</ion-label>
+
   </ion-item>
 </ion-content>
